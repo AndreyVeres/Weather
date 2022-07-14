@@ -13,8 +13,8 @@ function getResourse() {
             console.log(data)
 
             document.querySelector('.city').innerHTML = data.city.name;
-            document.querySelector('.current').innerHTML = Math.round(data.list[0].main.temp - 273.15) + '&deg'
-            let times = document.querySelectorAll('.time p')
+            document.querySelector('.deg').innerHTML = Math.round(data.list[0].main.temp - 273.15) + '&deg'
+            let times = document.querySelectorAll('.currentTime')
             for (let i = 0; i < times.length; i++) {
                 let time = data.list[i].dt_txt
                 times[i].textContent = time.slice(10, 16)
